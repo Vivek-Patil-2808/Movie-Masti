@@ -1,0 +1,93 @@
+/* =====================
+   ABOUT PAGE
+===================== */
+
+.page-content {
+  margin-top: 120px;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 20px;
+}
+
+/* CARD */
+.about-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 42px 36px;
+  text-align: center;
+  color: var(--text);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-card h1 {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.about-card p {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  opacity: 0.9;
+  color: var(--text);
+}
+
+/* HIGHLIGHT TEXT */
+.highlight {
+  margin-top: 22px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 30px 22px;
+  }
+
+  .about-card h1 {
+    font-size: 28px;
+  }
+}
+
+/* BRAND / LOGO */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+body.dark .logo {
+  filter: drop-shadow(0 0 6px rgb(249, 232, 0));
+}
+
+/* ABOUT PAGE MOBILE */
+@media (max-width: 768px) {
+  .about-card {
+    margin: 16px;
+    padding: 18px;
+  }
+
+  .about-card h1 {
+    font-size: 22px;
+  }
+}

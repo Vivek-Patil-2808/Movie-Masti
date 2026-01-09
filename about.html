@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | MovieMasti</title>
+  <!-- FAVICON -->
+<link rel="icon" type="image/png" href="assets/logo.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="checkAuth(); loadUser();">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <div class="brand">
+  <img src="assets/logo.png" alt="MovieMasti Logo" class="logo">
+  <span class="brand-text">About Us</span>
+</div>
+    <div class="nav-right">
+      <span id="userInfo"></span>
+      <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+    </div>
+  </header>
+
+
+  <!-- BACK BUTTON BELOW NAVBAR -->
+<div class="back-container">
+  <button class="back-btn" onclick="goHome()">
+    <i class="fas fa-arrow-left"></i>
+    Back to Home
+  </button>
+</div>
+
+  <!-- SIDEBAR -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="favorites.html"><i class="fas fa-heart"></i> Favorites</a>
+    <a href="about.html" class="active"><i class="fas fa-info-circle"></i> About Us</a>
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a>
+    <button onclick="toggleDark()"><i class="fas fa-moon"></i> Dark Mode</button>
+    <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </div>
+
+  <!-- CONTENT -->
+  <section class="page-content">
+    <div class="about-card">
+    <h1>🎬 MovieMasti</h1>
+    <p>
+      MovieMasti is a movie discovery web application that allows users to
+      search movies, view details, and save their favourite movies.
+    </p>
+
+    <p>
+      This project is built using HTML, CSS, JavaScript and OMDb API with
+      modern UI principles like glassmorphism and dark mode.
+    </p>
+
+    <p class="highlight">
+      Built with ❤️ for learning and entertainment.
+    </p>
+
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* =====================
+   DETAILS PAGE (CLEAN)
+   Uses global theme from style.css
+===================== */
+
+.back-btn:hover {
+  color: var(--accent);
+  transform: translateX(-6px);
+}
+
+/* DETAILS CARD */
+.details-box {
+  margin-top: 120px;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 34px;
+  background: var(--card-bg);
+  color: var(--text);
+  border-radius: 24px;
+  text-align: center;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+/* POSTER */
+.details-box img {
+  width: 280px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* TITLE */
+.details-box h1 {
+  margin-bottom: 12px;
+}
+
+/* TEXT */
+.details-box p {
+  margin: 8px 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* BADGES */
+.badge {
+  display: inline-block;
+  margin: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  background: rgba(0,0,0,0.15);
+}
+
+body.dark .badge {
+  background: rgba(255,255,255,0.18);
+}
+
+/* LOADING */
+.loading {
+  opacity: 0.85;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .details-box {
+    margin: 110px 14px 40px;
+    padding: 24px;
+  }
+
+  .details-box img {
+    width: 220px;
+  }
+}
+
+/* BRAND / LOGO */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+body.dark .logo {
+  filter: drop-shadow(0 0 6px rgb(249, 232, 0));
+}
+
+/* DETAILS PAGE MOBILE */
+@media (max-width: 768px) {
+  .details-box {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .details-box h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-box {
+    margin: 12px;
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact | MovieMasti</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="checkAuth(); loadUser();">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="MovieMasti Logo" class="logo">
+      <span class="brand-text">Contact Us</span>
+    </div>
+
+    <div class="nav-right">
+      <span id="userInfo"></span>
+      <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+    </div>
+  </header>
+
+  <!-- BACK BUTTON BELOW NAVBAR -->
+  <div class="back-container">
+    <button class="back-btn" onclick="goHome()">
+      <i class="fas fa-arrow-left"></i>
+      Back to Home
+    </button>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div id="mobileMenu" class="mobile-menu">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="favorites.html"><i class="fas fa-heart"></i> Favorites</a>
+    <a href="about.html"><i class="fas fa-info-circle"></i> About Us</a>
+    <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact Us</a>
+    <button onclick="toggleDark()"><i class="fas fa-moon"></i> Dark Mode</button>
+    <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+  </div>
+
+  <!-- CONTENT -->
+  <section class="page-content">
+    <div class="contact-card">
+
+      <h1>Get in Touch</h1>
+      <p class="subtitle">We’d love to hear from you 🎬</p>
+
+      <!-- FORMSPREE FORM -->
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/xeeejqqk"
+        method="POST"
+      >
+
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="input-group textarea">
+          <i class="fas fa-comment"></i>
+          <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        </div>
+
+        <button type="submit">
+          <i class="fas fa-paper-plane"></i>
+          Send Message
+        </button>
+
+      </form>
+
+      <p class="success-msg">
+        Thank you! Your message has been sent successfully.
+      </p>
+
+      <!-- CONNECT WITH US -->
+      <div class="connect-section">
+        <h3>Connect With Us</h3>
+
+        <div class="social-links">
+          <a href="https://github.com/Vivek-Patil-2808" target="_blank" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/vivek-patil-a27740374" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+
+          <a href="mailto:patilvivek082005@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>

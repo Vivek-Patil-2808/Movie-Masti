@@ -1,0 +1,202 @@
+/* =====================
+   CONTACT PAGE
+===================== */
+
+.page-content {
+  min-height: 100vh;
+  padding-top: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.contact-card h1 {
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  opacity: 0.85;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: var(--text);
+  opacity: 0.7;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.12);
+  color: var(--text);
+  outline: none;
+  font-size: 14px;
+}
+
+.input-group textarea {
+  resize: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: rgba(255,255,255,0.65);
+}
+
+/* BUTTON */
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+.contact-form button:active {
+  transform: scale(0.95);
+}
+
+/* SUCCESS MESSAGE */
+.success-msg {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #2ecc71;
+  display: none;
+}
+
+/* Show success after Formspree redirect */
+form:has(button:disabled) + .success-msg {
+  display: block;
+}
+
+/* =====================
+   LIGHT MODE FIX
+===================== */
+body:not(.dark) .contact-card {
+  background: #f2f2f2;
+  color: #111;
+}
+
+body:not(.dark) .contact-card h1 {
+  color: #111;
+}
+
+body:not(.dark) .subtitle {
+  color: #444;
+}
+
+body:not(.dark) .input-group input,
+body:not(.dark) .input-group textarea {
+  background: #ffffff;
+  color: #111;
+}
+
+body:not(.dark) .input-group input::placeholder,
+body:not(.dark) .input-group textarea::placeholder {
+  color: #777;
+}
+
+body:not(.dark) .input-group i {
+  color: #555;
+}
+
+body:not(.dark) .contact-form button {
+  background: #ffd700;
+  color: #111;
+}
+
+/* CONTACT PAGE MOBILE */
+@media (max-width: 480px) {
+  .contact-card {
+    margin: 16px;
+    padding: 20px;
+  }
+
+  .contact-form button {
+    font-size: 14px;
+  }
+}
+
+/* =====================
+   CONNECT WITH US
+===================== */
+.connect-section {
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  text-align: center;
+}
+
+.connect-section h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  color: var(--text);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-links a:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* LIGHT MODE FIX */
+body:not(.dark) .connect-section {
+  border-top: 1px solid rgba(0,0,0,0.1);
+}

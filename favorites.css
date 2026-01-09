@@ -1,0 +1,132 @@
+/* =====================
+   FAVORITES PAGE STYLES
+   (Uses global style.css theme)
+===================== */
+
+/* PAGE SPACING */
+.favorites-grid {
+  margin-top: 90px;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 22px;
+}
+
+/* FAVORITE CARD */
+.favorite-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 0 22px rgba(255, 71, 87, 0.6);
+}
+
+.favorite-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.favorite-card h4 {
+  margin: 8px 0 4px;
+  font-size: 14px;
+}
+
+.favorite-card small {
+  opacity: 0.8;
+}
+
+/* EMPTY STATE MESSAGE */
+.empty-msg {
+  max-width: 320px;
+  margin: 120px auto 0;
+
+  padding: 18px 22px;
+  text-align: center;
+
+  background: var(--card-bg);
+  color: var(--text);
+
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 500;
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+
+  display: none; /* controlled by JS */
+}
+
+
+/* =====================
+   HEART TOGGLE ANIMATION
+   (Reusable on movie cards)
+===================== */
+
+.fav-icon {
+  color: #aaa;
+  cursor: pointer;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.fav-icon.active {
+  color: #ff4757;
+  animation: heartPop 0.3s ease;
+}
+
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .favorite-card img {
+    height: 220px;
+  }
+}
+
+/* BRAND / LOGO */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+body.dark .logo {
+  filter: drop-shadow(0 0 6px rgb(249, 232, 0));
+}
+
+/* FAVORITES GRID MOBILE */
+@media (max-width: 480px) {
+  .favorites-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+  }
+
+  .favorite-card img {
+    height: 200px;
+  }
+}

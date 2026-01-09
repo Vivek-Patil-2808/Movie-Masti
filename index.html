@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MovieMasti | Home</title>
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="checkAuth(); loadUser();">
+
+  <div class="movie-card glass"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="assets/logo.png" alt="MovieMasti Logo" class="logo">
+      <span class="brand-text">MovieMasti</span>
+    </div>
+
+    <div class="nav-right">
+      <span id="userInfo"></span>
+      <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU (UPDATED ONLY HERE) -->
+  <div id="mobileMenu" class="mobile-menu">
+
+    <!-- PROFILE SECTION (MOBILE ONLY) -->
+    <div class="sidebar-profile">
+      <img id="sidebarAvatar" alt="User Avatar">
+      <h4 id="sidebarName"></h4>
+    </div>
+
+    <a href="index.html">
+      <i class="fas fa-home"></i> Home
+    </a>
+
+    <a href="favorites.html">
+      <i class="fas fa-heart"></i> Favorites
+    </a>
+
+    <a href="about.html">
+      <i class="fas fa-info-circle"></i> About Us
+    </a>
+
+    <a href="contact.html">
+      <i class="fas fa-envelope"></i> Contact Us
+    </a>
+
+    <button onclick="toggleDark()">
+      <i class="fas fa-moon"></i> Dark Mode
+    </button>
+
+    <button class="logout-btn" onclick="logout()">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <h1 id="welcomeText" class="welcome-text"></h1>
+
+    <div class="search-section">
+      <input id="searchInput" placeholder="Search movies...">
+      <button onclick="searchMovies()">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <button onclick="prevPage()"><i class="fas fa-chevron-left"></i></button>
+    <span id="pageNo">1</span>
+    <button onclick="nextPage()"><i class="fas fa-chevron-right"></i></button>
+  </div>
+
+  <!-- MOVIES GRID -->
+  <div id="movies" class="movies-grid"></div>
+
+  <!-- SUCCESS MODAL -->
+  <div id="successModal" class="modal-overlay">
+    <div class="modal-box">
+      <i id="modalIcon" class="fas fa-check-circle"></i>
+      <h3 id="modalTitle">Success</h3>
+      <p id="modalMessage">Action completed successfully</p>
+      <button onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="MovieMasti Logo">
+        <h3>MovieMasti</h3>
+        <p>Your place to discover and save amazing movies.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a href="https://github.com/Vivek-Patil-2808" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/vivek-patil-a27740374" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:patilvivek082005@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 MovieMasti. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+</body>
+</html>
